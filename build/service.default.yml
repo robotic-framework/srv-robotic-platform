@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: ${PROJECT_NAME}
+  namespace: ${PROJECT_GROUP}
+  ownerReferences:
+  - apiVersion: apps/v1beta2
+    kind: Deployment
+    name: ${PROJECT_NAME}
+    uid: ${DEPLOYMENT_UID}
+spec:
+  ports:
+  - name: tcp8920
+    port: 8920
+    protocol: TCP
+    targetPort: 8920
+  - name: tcp8820
+    port: 8820
+    protocol: TCP
+    targetPort: 8820
+  selector:
+    workload.user.cattle.io/workloadselector: ${PROJECT_SELECTOR}
+status:
+  loadBalancer: {}
