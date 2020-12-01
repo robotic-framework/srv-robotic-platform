@@ -11,14 +11,14 @@ metadata:
     uid: ${DEPLOYMENT_UID}
 spec:
   ports:
-  - name: tcp8920
-    port: 8920
+  - name: tcp8900
+    port: 8900
     protocol: TCP
-    targetPort: 8920
-  - name: tcp8820
-    port: 8820
+    targetPort: 8900
+  - name: tcp8800
+    port: 8800
     protocol: TCP
-    targetPort: 8820
+    targetPort: 8800
   selector:
     workload.user.cattle.io/workloadselector: ${PROJECT_SELECTOR}
 status:

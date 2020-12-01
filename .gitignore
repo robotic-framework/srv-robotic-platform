@@ -1,2 +1,6 @@
 .idea
 go.sum
+build/configs/local.yml
+build/srv-robotic-platform
+build/project.yml
+api/openapi.json

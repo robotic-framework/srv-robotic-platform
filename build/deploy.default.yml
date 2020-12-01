@@ -21,11 +21,11 @@ spec:
         imagePullPolicy: Always
         name: ${PROJECT_NAME}
         ports:
-        - containerPort: 8920
-          name: tcp8920
+        - containerPort: 8900
+          name: tcp8900
           protocol: TCP
-        - containerPort: 8820
-          name: tcp8820
+        - containerPort: 8800
+          name: tcp8800
           protocol: TCP
         resources: {}
       restartPolicy: Always
